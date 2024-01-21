@@ -1,9 +1,7 @@
-import { VStack } from "@chakra-ui/react";
+import { HStack, Wrap } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import Books from "../components/Books";
 import { getAllBooks } from "../modules/fetch";
- 
-
 
 export default function Homepage() {
   const [books, setBooks] = useState([]);
@@ -16,10 +14,12 @@ export default function Homepage() {
   }, []);
 
   return (
-    <VStack w="100vw">
-      {books?.books?.map((book) => (
-        <Books key={`${book.id} ${book.title}`} {...book} />
-      ))}
-    </VStack>
+    <HStack w="100vw" justifyContent="center">
+      <Wrap spacing="4" justify="center">
+        {books?.books?.map((book) => (
+          <Books key={`${book.id} ${book.title}`} {...book} />
+        ))}
+      </Wrap>
+    </HStack>
   );
 }

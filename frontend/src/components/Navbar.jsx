@@ -42,20 +42,20 @@ const Navbar = () => {
       justify="space-between"
       wrap="wrap"
       padding="1rem"
-      bg="teal.500"
-      color="white"
+      bg="#71C9CE"
+      color="#E3FDFD"
     >
       <Link to="/">
         <Flex align="center" mr={5} cursor="pointer">
           <Text fontSize="xl" fontWeight="bold">
-            My Website
+            Book Store
           </Text>
         </Flex>
       </Link>
       <HStack>
         {isLogin && (
           <Link to="/newbook">
-            <Button colorScheme="blackAlpha">Create New Book</Button>
+            <Button colorScheme="green">Create New Book</Button>
           </Link>
         )}
         {!isLogin ? (
@@ -64,11 +64,11 @@ const Navbar = () => {
           </Button>
         ) : (
           <Button
-            colorScheme="blue"
+            colorScheme="red"
             onClick={() => {
               window.localStorage.removeItem("token");
               setIsLogin(false);
-              navigate("/")
+              navigate("/");
             }}
           >
             Logout

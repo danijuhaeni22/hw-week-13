@@ -133,7 +133,7 @@ export default function BookForm({ bookData }) {
           </FormControl>
         )}
 
-        <Button type="submit">{bookData ? "Edit Book" : "Create Book"}</Button>
+        <Button type="submit" colorScheme="blue">{bookData ? "Save Changes" : "Create Book"}</Button>
       </VStack>
     </form>
   );

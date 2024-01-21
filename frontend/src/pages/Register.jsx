@@ -25,11 +25,7 @@ const Register = () => {
       return;
     }
     try {
-      await registerUser(
-        e.target.name.value,
-        e.target.email.value,
-        password
-      );
+      await registerUser(e.target.name.value, e.target.email.value, password);
       toast({
         title: "Registered",
         description: "You have successfully registered.",
@@ -67,7 +63,7 @@ const Register = () => {
 
           <FormControl isRequired>
             <FormLabel>Name</FormLabel>
-            <Input type="name" name="name" placeholder="Enter your mame" />
+            <Input type="name" name="name" placeholder="Enter your name" />
           </FormControl>
 
           <FormControl isRequired>

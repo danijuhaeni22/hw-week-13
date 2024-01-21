@@ -59,23 +59,29 @@ export default function BookDetails() {
               alt={book.title}
             />
           </Box>
-          <Box ml="8">
-            <Heading as="h1" size="lg">
-              {book.title}
-            </Heading>
-            <Text fontSize="xl" fontWeight="semibold" color="gray.500">
-              {book.author}
-            </Text>
-            <Text fontSize="xl" fontWeight="semibold" color="gray.500">
-              {book.publisher}
-            </Text>
-            <Text fontSize="xl" fontWeight="semibold" color="gray.500" mb="4">
-              {book.year} | {book.pages} pages
-            </Text>
-          </Box>
+          <Flex
+            align="center"
+            justifyContent="center"
+            ml={5}
+          >
+            <Box ml="8">
+              <Heading as="h1" size="lg">
+                {book.title}
+              </Heading>
+              <Text fontSize="xl" fontWeight="semibold" color="gray.500">
+                {book.author}
+              </Text>
+              <Text fontSize="xl" fontWeight="semibold" color="gray.500">
+                {book.publisher}
+              </Text>
+              <Text fontSize="xl" fontWeight="semibold" color="gray.500" mb="4">
+                {book.year} | {book.pages} pages
+              </Text>
+            </Box>
+          </Flex>
         </Flex>
       )}
-      {localStorage.getItem('token') && (
+      {localStorage.getItem("token") && (
         <HStack>
           <Popover>
             <PopoverTrigger>
@@ -94,7 +100,7 @@ export default function BookDetails() {
             </PopoverContent>
           </Popover>
           <Link to={`/editbook/${id}`}>
-            <Button>Edit</Button>
+            <Button colorScheme="yellow">Edit</Button>
           </Link>
         </HStack>
       )}
