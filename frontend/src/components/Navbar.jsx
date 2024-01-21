@@ -42,13 +42,13 @@ const Navbar = () => {
       justify="space-between"
       wrap="wrap"
       padding="1rem"
-      bg="#71C9CE"
+      bg="#8294C4"
       color="#E3FDFD"
     >
       <Link to="/">
         <Flex align="center" mr={5} cursor="pointer">
           <Text fontSize="xl" fontWeight="bold">
-            Book Store
+            My Website
           </Text>
         </Flex>
       </Link>

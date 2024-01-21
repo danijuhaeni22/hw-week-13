@@ -10,8 +10,8 @@ export default function Books({ id, title, author, image, publisher, year }) {
         mx={4}
         p={5}
         cursor="pointer"
-        backgroundColor={"#71C9CE"}
-        color={"#E3FDFD"}
+        backgroundColor={"#8294C4"}
+        color={"#FFEAD2"}
       >
         <VStack>
           <Heading size={"md"} color="whiteAlpha.900">
